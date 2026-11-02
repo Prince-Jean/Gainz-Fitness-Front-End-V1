@@ -54,7 +54,7 @@
         </ul>
 
         <div class="drawer-footer">
-          <a href="#login" class="btn btn-admin">ADMIN LOGIN</a>
+          <a href="#login" class="btn btn-admin">LOGIN</a>
         </div>
       </div>
     </div>
@@ -316,18 +316,18 @@
         </div>
       </div>
 
-      <!-- Pricing Row -->
-      <div class="flex-cards-row plans-row">
-        <!-- Basic Package -->
+      <!-- Pricing Rows (Separate Containers) -->
+      <!-- Monthly Plans Container -->
+      <div class="flex-cards-row plans-row" id="monthlyPlans" style="display: none;">
+        <!-- Basic Package (Monthly) -->
         <div class="plan-card-column animate-on-scroll fade-up">
           <div class="plan-card">
             <h3 class="plan-title">Basic Package</h3>
             <div class="plan-price">
               <span class="currency">₱</span>
-              <span class="price-value" data-monthly="1,000" data-yearly="800">800</span>
+              <span class="price-value">1,000</span>
             </div>
-            <p class="billing-period">per month, bill annually</p>
-            
+            <p class="billing-period">per month, billed monthly</p>
             <ul class="plan-features">
               <li><i class="fa-solid fa-circle-check"></i> Gym Access</li>
               <li><i class="fa-solid fa-circle-check"></i> 2x Fitness Consultant</li>
@@ -335,12 +335,11 @@
               <li><i class="fa-solid fa-circle-check"></i> 3 Days per week</li>
               <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
             </ul>
-
             <button class="btn btn-plan">Register Now</button>
           </div>
         </div>
 
-        <!-- Mid Package -->
+        <!-- Mid Package (Monthly) -->
         <div class="plan-card-column animate-on-scroll fade-up delay-1">
           <div class="plan-card featured">
             <div class="best-offer-ribbon">
@@ -349,10 +348,9 @@
             <h3 class="plan-title">Mid Package</h3>
             <div class="plan-price">
               <span class="currency">₱</span>
-              <span class="price-value" data-monthly="1,300" data-yearly="1,000">1,000</span>
+              <span class="price-value">1,300</span>
             </div>
-            <p class="billing-period">per month, bill annually</p>
-            
+            <p class="billing-period">per month, billed monthly</p>
             <ul class="plan-features">
               <li><i class="fa-solid fa-circle-check"></i> Full Gym Access</li>
               <li><i class="fa-solid fa-circle-check"></i> 4x Fitness Consultant</li>
@@ -360,21 +358,19 @@
               <li><i class="fa-solid fa-circle-check"></i> 5 Days per week</li>
               <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
             </ul>
-
             <button class="btn btn-plan">Register Now</button>
           </div>
         </div>
 
-        <!-- Pro Package -->
+        <!-- Pro Package (Monthly) -->
         <div class="plan-card-column animate-on-scroll fade-up delay-2">
           <div class="plan-card">
             <h3 class="plan-title">Pro Package</h3>
             <div class="plan-price">
               <span class="currency">₱</span>
-              <span class="price-value" data-monthly="1,800" data-yearly="1,500">1,500</span>
+              <span class="price-value">1,800</span>
             </div>
-            <p class="billing-period">per month, bill annually</p>
-            
+            <p class="billing-period">per month, billed monthly</p>
             <ul class="plan-features">
               <li><i class="fa-solid fa-circle-check"></i> Unlimited Gym Access</li>
               <li><i class="fa-solid fa-circle-check"></i> 7x Fitness Consultant</li>
@@ -382,13 +378,76 @@
               <li><i class="fa-solid fa-circle-check"></i> Gym Card</li>
               <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
             </ul>
-
             <button class="btn btn-plan">Register Now</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+
+      <!-- Yearly Plans Container (Visible by default) -->
+      <div class="flex-cards-row plans-row" id="yearlyPlans" style="display: flex;">
+        <!-- Basic Package (Yearly) -->
+        <div class="plan-card-column animate-on-scroll fade-up">
+          <div class="plan-card">
+            <h3 class="plan-title">Basic Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value">800</span>
+            </div>
+            <p class="billing-period">per month, billed annually</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 2x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> 3 Days per week</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+
+        <!-- Mid Package (Yearly) -->
+        <div class="plan-card-column animate-on-scroll fade-up delay-1">
+          <div class="plan-card featured">
+            <div class="best-offer-ribbon">
+              <span>Best Offer</span>
+            </div>
+            <h3 class="plan-title">Mid Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value">1,000</span>
+            </div>
+            <p class="billing-period">per month, billed annually</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Full Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 4x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> 5 Days per week</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+
+        <!-- Pro Package (Yearly) -->
+        <div class="plan-card-column animate-on-scroll fade-up delay-2">
+          <div class="plan-card">
+            <h3 class="plan-title">Pro Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value">1,500</span>
+            </div>
+            <p class="billing-period">per month, billed annually</p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Unlimited Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 7x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> Gym Card</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+      </div>
 
 
   <!-- Bootstrap -->

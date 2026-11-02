@@ -48,39 +48,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const billingToggle = document.getElementById('billingToggle');
     const labelMonthly = document.getElementById('label-monthly');
     const labelYearly = document.getElementById('label-yearly');
-    const priceValues = document.querySelectorAll('.price-value');
+    const monthlyPlans = document.getElementById('monthlyPlans');
+    const yearlyPlans = document.getElementById('yearlyPlans');
 
-    if (billingToggle) {
+    if (billingToggle && monthlyPlans && yearlyPlans) {
       billingToggle.addEventListener('change', (e) => {
         const isYearly = e.target.checked;
 
-        // Update Label Active States
         if (isYearly) {
           labelYearly.classList.add('active');
           labelMonthly.classList.remove('active');
+          monthlyPlans.style.display = 'none';
+          yearlyPlans.style.display = 'flex';
         } else {
           labelMonthly.classList.add('active');
           labelYearly.classList.remove('active');
+          yearlyPlans.style.display = 'none';
+          monthlyPlans.style.display = 'flex';
         }
 
-        // Smooth Price Swap Transition
-        priceValues.forEach((price) => {
-          price.style.opacity = '0';
-          price.style.transform = 'translateY(-5px)';
-
-          setTimeout(() => {
-            price.textContent = isYearly 
-              ? price.getAttribute('data-yearly') 
-              : price.getAttribute('data-monthly');
-            
-            price.style.opacity = '1';
-            price.style.transform = 'translateY(0)';
-          }, 150);
-        });
-      });
-
-      priceValues.forEach((price) => {
-        price.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        // Re-trigger animations for newly displayed cards
+        const visibleCards = (isYearly ? yearlyPlans : monthlyPlans).querySelectorAll('.animate-on-scroll');
+        visibleCards.forEach(card => card.classList.add('animated'));
       });
     }
 
@@ -97,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animated');
-          observer.unobserve(entry.target); // Animate once for clean performance
+          observer.unobserve(entry.target); // Animate once
         }
       });
     }, observerOptions);
