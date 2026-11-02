@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIG Gainz Fitness</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=M+PLUS+1:wght@400;500&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Orbitron:wght@800;900&family=Oswald:wght@700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header fixed-top">
+    <div class="header-container">
+      <a class="site-brand" href="#home">
+        <span class="logo-icon">B<i class="fa-solid fa-dumbbell"></i>G</span>
+        <span class="logo-text">GainzFitness</span>
+      </a>
+
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger-btn" id="menuToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Side-Drawer Overlay Backdrop -->
+      <div class="nav-overlay" id="navOverlay"></div>
+
+      <!-- Navigation Drawer Menu -->
+      <div class="nav-drawer" id="navDrawer">
+        <div class="drawer-header">
+          <span class="logo-text">GainzFitness</span>
+          <button class="close-btn" id="menuClose" aria-label="Close navigation">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        
+        <ul class="nav-links-list">
+          <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#studio">STUDIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trainers">TRAINERS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#plans">WELLNESS PLANS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#connect">CONNECT</a></li>
+        </ul>
+
+        <div class="drawer-footer">
+          <a href="#login" class="btn btn-admin">ADMIN LOGIN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="site-container hero-container">
+      <div class="hero-flex">
+        <div class="hero-left animate-on-scroll fade-up">
+          <h1 class="hero-title">BUILD YOUR<br>ULTIMATE<br>STRENGTH</h1>
+          
+          <div class="transformation-box">
+            <div class="assets/transformation-avatars">
+              <img src="assets/transform1.jpeg" alt="Transformation member" class="avatar">
+              <img src="assets/transform2.jpeg" alt="Transformation member" class="avatar">
+              <img src="assets/transform3.jpeg" alt="Transformation member" class="avatar">
+            </div>
+            <div class="transformation-details">
+              <div class="transformation-count">200+</div>
+              <div class="transformation-label">Transformation</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right animate-on-scroll fade-up delay-2">
+          <p class="hero-description">
+            Heavy-duty gym equipment, personalized coaching, and an elite community engineered to unlock your peak athletic performance.
+          </p>
+          <a href="#plans" class="btn btn-member">BECOME A MEMBER</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Section -->
+  <section id="studio" class="studio-section">
+    <div class="site-container py-5">
+      <div class="section-header-flex animate-on-scroll fade-up">
+        <div class="section-title-col">
+          <h2 class="section-title studio-title">BIG GAINZ<br>FITNESS <span class="text-stroke section-title">STUDIO</span></h2>
+        </div>
+        <div class="section-desc-col">
+          <p class="section-description">
+            From heavy free-weight training to advanced cardio decks and luxury recovery lounges, every corner of our studio is built to support your daily strength journey.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carousel -->
+      <div id="studioCarousel" class="carousel slide studio-carousel mt-5 animate-on-scroll fade-up delay-1" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner curved-frame">
+          <div class="carousel-item active">
+            <div class="carousel-flex-row">
+              <div class="carousel-card"><img src="assets/kar1.jpg" class="carousel-img" alt="Studio Area 1"></div>
+              <div class="carousel-card"><img src="assets/kar2.jpg" class="carousel-img" alt="Studio Area 2"></div>
+              <div class="carousel-card"><img src="assets/kar3.jpg" class="carousel-img" alt="Studio Area 3"></div>
+              <div class="carousel-card"><img src="assets/kar4.jpg" class="carousel-img" alt="Studio Area 4"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-flex-row">
+              <div class="carousel-card"><img src="assets/kar5.jpg" class="carousel-img" alt="Studio Area 5"></div>
+              <div class="carousel-card"><img src="assets/kar1.jpg" class="carousel-img" alt="Studio Area 6"></div>
+              <div class="carousel-card"><img src="assets/kar2.jpg" class="carousel-img" alt="Studio Area 7"></div>
+              <div class="carousel-card"><img src="assets/kar3.jpg" class="carousel-img" alt="Studio Area 8"></div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#studioCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#studioCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers Section -->
+  <section id="trainers" class="trainers-section">
+    <div class="site-container py-5">
+      <div class="text-center-wrapper animate-on-scroll fade-up">
+        <h2 class="section-title trainers-title">MEET OUR <span class="text-stroke section-title">TRAINERS</span></h2>
+        <p class="section-description centered-desc">
+          Certified fitness experts dedicated to guiding your strength, conditioning, and transformation goals.
+        </p>
+      </div>
+
+      <div class="flex-cards-row">
+        <!-- Trainer 1 -->
+        <div class="card-column animate-on-scroll fade-up">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer1.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Leonard Ramos</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 2 -->
+        <div class="card-column animate-on-scroll fade-up delay-1">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer2.jpeg" alt="Simon Devanch">
+            </div>
+            <div class="trainer-info">
+              <h5>Jean Cruz</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 3 -->
+        <div class="card-column animate-on-scroll fade-up delay-2">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer3.jpeg" alt="Coloer Pertuna">
+            </div>
+            <div class="trainer-info">
+              <h5>Leon Dela Cruz</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 4 -->
+        <div class="card-column animate-on-scroll fade-up delay-3">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer4.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Jin Jugo</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 5 -->
+        <div class="card-column animate-on-scroll fade-up delay-3">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer5.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Jillion Pasana</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 6 -->
+        <div class="card-column animate-on-scroll fade-up delay-3">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer6.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Lij Bautista</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 7 -->
+        <div class="card-column animate-on-scroll fade-up delay-3">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer7.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Jeo Isla</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Trainer 8 -->
+        <div class="card-column animate-on-scroll fade-up delay-3">
+          <div class="trainer-card">
+            <div class="trainer-img-wrapper">
+              <img src="assets/trainer8.jpeg" alt="Dezion Flovable">
+            </div>
+            <div class="trainer-info">
+              <h5>Prins Pabuna</h5>
+              <p>Head Strength Coach</p>
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wellness Plans Section -->
+  <section id="plans" class="plans-section">
+    <div class="site-container py-5">
+      <div class="text-center-wrapper animate-on-scroll fade-up">
+        <h2 class="section-title plans-title">WELLNESS <span class="text-stroke section-title">PLANS</span></h2>
+        <p class="section-description centered-desc">
+          Choose the right package engineered for your fitness goals. Upgrade or cancel anytime with zero hidden fees.
+        </p>
+
+        <!-- Toggle Switch -->
+        <div class="toggle-switch-wrapper">
+          <span class="toggle-label" id="label-monthly">Monthly</span>
+          <label class="custom-toggle">
+            <input type="checkbox" id="billingToggle" checked>
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-label active" id="label-yearly">Yearly</span>
+        </div>
+      </div>
+
+      <!-- Pricing Row -->
+      <div class="flex-cards-row plans-row">
+        <!-- Basic Package -->
+        <div class="plan-card-column animate-on-scroll fade-up">
+          <div class="plan-card">
+            <h3 class="plan-title">Basic Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value" data-monthly="1,000" data-yearly="800">800</span>
+            </div>
+            <p class="billing-period">per month, bill annually</p>
+            
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 2x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> 3 Days per week</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+
+        <!-- Mid Package -->
+        <div class="plan-card-column animate-on-scroll fade-up delay-1">
+          <div class="plan-card featured">
+            <div class="best-offer-ribbon">
+              <span>Best Offer</span>
+            </div>
+            <h3 class="plan-title">Mid Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value" data-monthly="1,300" data-yearly="1,000">1,000</span>
+            </div>
+            <p class="billing-period">per month, bill annually</p>
+            
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Full Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 4x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> 5 Days per week</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+
+        <!-- Pro Package -->
+        <div class="plan-card-column animate-on-scroll fade-up delay-2">
+          <div class="plan-card">
+            <h3 class="plan-title">Pro Package</h3>
+            <div class="plan-price">
+              <span class="currency">₱</span>
+              <span class="price-value" data-monthly="1,800" data-yearly="1,500">1,500</span>
+            </div>
+            <p class="billing-period">per month, bill annually</p>
+            
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-circle-check"></i> Unlimited Gym Access</li>
+              <li><i class="fa-solid fa-circle-check"></i> 7x Fitness Consultant</li>
+              <li><i class="fa-solid fa-circle-check"></i> Nutrition Tracking</li>
+              <li><i class="fa-solid fa-circle-check"></i> Gym Card</li>
+              <li><i class="fa-solid fa-circle-check"></i> Personal Trainer</li>
+            </ul>
+
+            <button class="btn btn-plan">Register Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
